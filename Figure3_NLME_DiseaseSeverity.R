@@ -4,8 +4,8 @@ library(tidyverse)
 library(ggpubr)
 
 # Data
-serology <- xlsx::read.xlsx("Figures2_3_S1_Data.xlsx", sheetName = "Complete")
-data <- xlsx::read.xlsx("Figures2_3_S1_Data.xlsx", sheetName = "TimeDiscretized")
+serology <- xlsx::read.xlsx("./SynData/Figures2_3_S1_Data.xlsx", sheetName = "Complete")
+data <- xlsx::read.xlsx("./SynData/Figures2_3_S1_Data.xlsx", sheetName = "TimeDiscretized")
 data$DaysFromDays = factor(data$DaysFromDays, levels = c("0", "15", "30", "60", "90", "180", "270", "360"))
 
 

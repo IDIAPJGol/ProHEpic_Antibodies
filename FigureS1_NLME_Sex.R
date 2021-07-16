@@ -6,8 +6,8 @@ library(wesanderson)
 
 
 # Data
-serology <- xlsx::read.xlsx("Figures2_3_S1_Data.xlsx", sheetName = "Complete")
-data <- xlsx::read.xlsx("Figures2_3_S1_Data.xlsx", sheetName = "TimeDiscretized")
+serology <- xlsx::read.xlsx("./SynData/Figures2_3_S1_Data.xlsx", sheetName = "Complete")
+data <- xlsx::read.xlsx("./SynData/Figures2_3_S1_Data.xlsx", sheetName = "TimeDiscretized")
 data$DaysFromDays = factor(data$DaysFromDays, levels = c("0", "15", "30", "60", "90", "180", "270", "360"))
 cols = wes_palette("Rushmore1", n = 5)[c(3,5,4)]
 

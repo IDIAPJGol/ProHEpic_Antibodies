@@ -1,4 +1,4 @@
-data <- xlsx::read.xlsx("./Table2_Data.xlsx", sheetIndex = 1)
+data <- xlsx::read.xlsx("./SynData/Table2_Data.xlsx", sheetIndex = 1)
 
 library(compareGroups)
 
