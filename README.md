@@ -1,6 +1,9 @@
 # ProHEpic_Antibodies
 Code for the analysis of antibody levels from the ProHEpic study.
 
+## Use of synthetic data
+Synthetic data has been generated using the R package synthpop to be able to run the scripts.
+
 ## Summary of tables and figures
 Please, find more details about the calculation of each table and figure in their corresponding caption.
 
