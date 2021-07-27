@@ -17,7 +17,7 @@ test$y.position = 15 +  c(1:nrow(test))
 means <- aggregate(IgM~DaysFromDays, data, mean)
 means$IgM <- round(means$IgM,2)
 
-p1<-ggboxplot(data, x = "DaysFromDays", y = "IgM", xlab = "Time from symptoms onset (days)", ylab ="IgM(N) (index units)", add = "mean")+
+p1<-ggboxplot(data, x = "DaysFromDays", y = "IgM", xlab = "Time from diangosis (days)", ylab ="IgM(N) (index units)", add = "mean")+
   stat_pvalue_manual(test, label = "p.adj.signif", hide.ns = T, tip.length = 0.01)+
   geom_hline(yintercept = 1.1, size = 1, alpha = 0.5, col = "darkred")+
   geom_hline(yintercept = 0.9, linetype = "dashed", size = 1, alpha = 0.5, col = "darkred")+
@@ -30,7 +30,7 @@ test$y.position = 15 +  c(1:nrow(test))
 means <- aggregate(IgG~DaysFromDays, data, mean)
 means$IgG <- round(means$IgG,2)
 
-p4<-ggboxplot(data, x = "DaysFromDays", y = "IgG", xlab = "Time from symptoms onset (days)", ylab ="IgG(N) (index units)", add = "mean")+
+p4<-ggboxplot(data, x = "DaysFromDays", y = "IgG", xlab = "Time from diangosis (days)", ylab ="IgG(N) (index units)", add = "mean")+
   stat_pvalue_manual(test, label = "p.adj.signif", hide.ns = T, tip.length = 0.01)+
   geom_hline(yintercept = 1.1, size = 1, alpha = 0.5, col = "darkred")+
   geom_hline(yintercept = 0.9, linetype = "dashed", size = 1, alpha = 0.5, col= "darkred")+
@@ -59,7 +59,7 @@ means <- data%>%group_by(DaysFromDays, ClinicalSpectrum)%>%summarize(IgM = mean(
 means$IgM <- round(means$IgM,2)
 
 p2<-ggboxplot(data, x = "DaysFromDays", y = "IgM", col = "ClinicalSpectrum", group = "ClinicalSpectrum",
-              xlab = "Time from symptoms onset (days)", ylab ="IgM(N) (index units)", add = "mean")+
+              xlab = "Time from diangosis (days)", ylab ="IgM(N) (index units)", add = "mean")+
   stat_pvalue_manual(test, label = "p.adj.signif", hide.ns = T, tip.length = 0.01)+
   geom_hline(yintercept = 1.1, size = 1, alpha = 0.5)+
   geom_hline(yintercept = 0.9, linetype = "dashed", size = 1, alpha = 0.5)+
@@ -76,7 +76,7 @@ means$IgG <- round(means$IgG,2)
 
 
 p5<-ggboxplot(data, x = "DaysFromDays", y = "IgG", col = "ClinicalSpectrum",
-              xlab = "Time from symptoms onset (days)", ylab ="IgG(N) (index units)", add = "mean")+
+              xlab = "Time from diangosis (days)", ylab ="IgG(N) (index units)", add = "mean")+
   stat_pvalue_manual(test, label = "p.adj.signif", hide.ns = T, tip.length = 0.01)+
   geom_hline(yintercept = 1.1, size = 1, alpha = 0.5)+
   geom_hline(yintercept = 0.9, linetype = "dashed", size = 1, alpha = 0.5)+
@@ -110,7 +110,7 @@ means <- aggregate(IgM~Sex, data%>%group_by(DaysFromDays), mean)
 means$IgM <- round(means$IgM,2)
 
 p3<-ggboxplot(data, x = "DaysFromDays", y = "IgM", col = "Sex",
-              xlab = "Time from symptoms onset (days)", ylab ="IgM(N) (index units)", palette = cols, add = "mean")+
+              xlab = "Time from diangosis (days)", ylab ="IgM(N) (index units)", palette = cols, add = "mean")+
   stat_pvalue_manual(test, label = "p.adj.signif", hide.ns = T)+
   geom_hline(yintercept = 1.1, size = 1, alpha = 0.5)+
   geom_hline(yintercept = 0.9, linetype = "dashed", size = 1, alpha = 0.5)+
@@ -126,7 +126,7 @@ means <- aggregate(IgG~Sex, data%>%group_by(DaysFromDays), mean)
 means$IgG <- round(means$IgG,2)
 
 p6 <-ggboxplot(data, x = "DaysFromDays", y = "IgG", col = "Sex",
-               xlab = "Time from symptoms onset (days)", ylab ="IgG(N) (index units)", palette = cols, add = "mean")+
+               xlab = "Time from diangosis (days)", ylab ="IgG(N) (index units)", palette = cols, add = "mean")+
   stat_pvalue_manual(test, label = "p.adj.signif", hide.ns = T, tip.length = 0.01)+
   geom_hline(yintercept = 1.1, size = 1, alpha = 0.5)+
   geom_hline(yintercept = 0.9, linetype = "dashed", size = 1, alpha = 0.5)+

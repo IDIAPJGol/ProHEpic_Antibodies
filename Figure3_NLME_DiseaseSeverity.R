@@ -50,7 +50,7 @@ IgM.plot = ggplot(left_join(all.IgM.forPlot, means0IgM),aes(x=DaysFromDays,y=IgM
   geom_line(size = 1, alpha = 0.8, col = "RoyalBlue")+
   # ylim(c(0,4))+
   ylab('IgM(N) (index units)')+
-  xlab("Time from symptoms onset (days)")+
+  xlab("Time from diagnosis (days)")+
   theme_classic()+
   theme(legend.position = "top")+
   geom_hline(yintercept = 1.1, size = 1, alpha = 0.5)+
@@ -101,7 +101,7 @@ IgG.plot = ggplot(left_join(all.IgG.forPlot, means0IgG),aes(x=DaysFromDays,y=IgG
   geom_errorbar(aes(ymin=lower,ymax=upper), alpha = 0.6, size = 1)+
   geom_line(size = 1, alpha = 0.8, col = "RoyalBlue")+
   ylab('IgG(N) (index units)')+
-  xlab("Time from symptoms onset (days)")+
+  xlab("Time from diagnosis (days)")+
   theme_classic()+
   theme(legend.position = "top")+
   geom_hline(yintercept = 1.1, size = 1, alpha = 0.5)+
@@ -214,7 +214,7 @@ IgM.plot = ggplot(IgM.forPlot,aes(x=DaysFromDays,y=IgM,col=ClinicalSpectrum, fil
   geom_errorbar(aes(ymin=lower,ymax=upper), alpha = 0.6, size = 1)+
   geom_line(size = 1, alpha = 0.6)+
   ylab('IgM(N) (index units)')+
-  xlab("Time from symptoms onset (days)")+
+  xlab("Time from diagnosis (days)")+
   theme_classic()+
   theme(legend.position = "top")+
   scale_fill_manual(values = c("black", "#00AFBB", "#E7B800", "#FC4E07"), name = "Disease severity")+
@@ -278,7 +278,7 @@ IgG.plot = ggplot(IgG.forPlot,aes(x=DaysFromDays,y=IgG,col=ClinicalSpectrum, fil
   geom_errorbar(aes(ymin=lower,ymax=upper), alpha = 0.6, size = 1)+
   geom_line(size = 1, alpha = 0.6)+
   ylab('IgG(N) (index units)')+
-  xlab("Time from symptoms onset (days)")+
+  xlab("Time from diagnosis (days)")+
   theme_classic()+
   theme(legend.position = "top")+
   scale_fill_manual(values = c("black", "#00AFBB", "#E7B800", "#FC4E07"), name = "Disease severity")+
