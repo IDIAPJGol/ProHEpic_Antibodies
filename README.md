@@ -2,7 +2,7 @@
 Code for the analysis of antibody levels from the ProHEpic study.
 
 ## Use of synthetic data
-Synthetic data have been generated using the R package synthpop to be able to run the scripts. These data are similar to the original when aggregated, but the temporal relationship of the samples of the same individuals does not hold, so the results may be different from those obtained in the article (Figures 1-3).
+Synthetic data have been generated using the R package synthpop to be able to run the scripts. These data are similar to the original when aggregated, but the temporal relationship of the samples of the same individuals does not hold. For this reasons, scripts that generate Figures 2 and 3 do not work, as the hyperparameters of the NLME models have been left as in the published models.
 
 ## Summary of tables and figures
 Please, find more details about the calculation of each table and figure in their corresponding caption.
