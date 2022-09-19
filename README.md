@@ -1,5 +1,6 @@
 # ProHEpic_Antibodies
-Code for the analysis of antibody levels from the ProHEpic study.
+Code for the analysis of antibody levels from the ProHEpic study. The results of this study can be found in 
+Violán, C., Torán-Monserrat, P., Quirant, B. et al. Kinetics of humoral immune response over 17 months of COVID-19 pandemic in a large cohort of healthcare workers in Spain: the ProHEpiC-19 study. BMC Infect Dis 22, 721 (2022). https://doi.org/10.1186/s12879-022-07696-6
 
 ## Use of synthetic data
 Synthetic data have been generated using the R package synthpop to be able to run the scripts. These data are similar to the original when aggregated, but the temporal relationship of the samples of the same individuals does not hold. For this reasons, scripts that generate Figures 2 and 3 do not work, as the hyperparameters of the NLME models have been left as in the published models.
